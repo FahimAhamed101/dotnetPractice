@@ -159,3 +159,4 @@ C:\Users\Administrator\Desktop\ProductApi\obj\Debug\net10.0\refint\ProductApi.dl
 C:\Users\Administrator\Desktop\ProductApi\obj\Debug\net10.0\ProductApi.pdb
 C:\Users\Administrator\Desktop\ProductApi\obj\Debug\net10.0\ProductApi.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\ProductApi\obj\Debug\net10.0\ref\ProductApi.dll
+C:\Users\Administrator\Desktop\ProductApi\obj\Debug\net10.0\ProductApi.sourcelink.json
