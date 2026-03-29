@@ -40,5 +40,34 @@ namespace ProductApi.Controllers
             var created = await _productService.CreateAsync(product);
             return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
+
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult<Product>> Update(int id, Product product)
+        {
+            if (product.Id != 0 && product.Id != id)
+            {
+                return BadRequest("Route id and product id must match.");
+            }
+
+            var updated = await _productService.UpdateAsync(id, product);
+            if (updated is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(updated);
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var deleted = await _productService.DeleteAsync(id);
+            if (!deleted)
+            {
+                return NotFound();
+            }
+
+            return NoContent();
+        }
     }
 }

@@ -10,7 +10,7 @@
         "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\ProductApi\\ProductApi.csproj",
         "projectName": "ProductApi",
         "projectPath": "C:\\Users\\Administrator\\Desktop\\ProductApi\\ProductApi.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Administrator\\Desktop\\ProductApi\\.dotnet\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Administrator\\Desktop\\ProductApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [

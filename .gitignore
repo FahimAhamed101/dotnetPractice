@@ -1,1 +1,4 @@
-.dotnet
+/.dotnet
+/bin
+/obj
+/Properties/PublishProfiles

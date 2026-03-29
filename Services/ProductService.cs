@@ -29,5 +29,33 @@ namespace ProductApi.Services
             await _context.SaveChangesAsync();
             return product;
         }
+
+        public async Task<Product?> UpdateAsync(int id, Product product)
+        {
+            var existingProduct = await _context.Products.FindAsync(id);
+            if (existingProduct is null)
+            {
+                return null;
+            }
+
+            existingProduct.Name = product.Name;
+            existingProduct.Price = product.Price;
+
+            await _context.SaveChangesAsync();
+            return existingProduct;
+        }
+
+        public async Task<bool> DeleteAsync(int id)
+        {
+            var existingProduct = await _context.Products.FindAsync(id);
+            if (existingProduct is null)
+            {
+                return false;
+            }
+
+            _context.Products.Remove(existingProduct);
+            await _context.SaveChangesAsync();
+            return true;
+        }
     }
 }
